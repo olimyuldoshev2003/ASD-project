@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "react-router-dom"
 import "./App.css";
 
 //For Images and Videos
@@ -6,7 +7,7 @@ import "./App.css";
 import logoHeader from "./assets/ASD logo.jpg";
 import { Link } from "react-router-dom";
 
-function Home() {
+function Layout() {
   return (
     <div className="p-[30px_100px]">
       <header className="header">
@@ -31,11 +32,11 @@ function Home() {
             <option value="">Tj</option>
           </select>
         </div>
-      </header>
-      <section className="section"></section>
+          </header>
+          <OutLet/>
       <footer className="footer"></footer>
     </div>
   );
 }
 
-export default Home;
+export default Layout;

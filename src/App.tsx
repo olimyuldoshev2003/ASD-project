@@ -8,7 +8,6 @@ import logoHeader from "./assets/ASD logo.jpg"
 import { Link } from 'react-router-dom'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div className='p-[30px_100px]'>
