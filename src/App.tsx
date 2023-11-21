@@ -4,19 +4,32 @@ import './App.css'
 
 //For Images and Videos
 
-import logoHeader
+import logoHeader from "./assets/ASD logo.jpg"
+import { Link } from 'react-router-dom'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <div className='p-[30px_100px]'>
       <header className="header">
         <div className="block_1">
-          <img src="" alt="" />
+          <img src={logoHeader} alt="" className='w-[100px] h-[100px] rounded-full'/>
         </div>
-        <div className="block_2"></div>
-        <div className="block_3"></div>
+        <div className="block_2">
+          <Link to="">Home</Link>
+          <Link to="">About</Link>
+          <Link to=""></Link>
+          <Link to=""></Link>
+        </div>
+        <div className="block_3">
+          <select name="" id="">
+            <option value="">Lang</option>
+            <option value="">En</option>
+            <option value="">Ru</option>
+            <option value="">Tj</option>
+          </select>
+        </div>
       </header>
       <section className="section"></section>
       <footer className="footer"></footer>
