@@ -8,17 +8,16 @@ import logoHeader from "../assets/ASD logo.jpg";
 import Switcher from "../components/Switch UI/Switcher";
 import { Box, Modal } from "@mui/material";
 function Layout() {
-
   const location = useLocation();
 
-  const [modal, setModal] = useState<boolean>(false)
+  const [modal, setModal] = useState<boolean>(false);
 
   function openModal() {
-    setModal(true)
+    setModal(true);
   }
 
   function handleClose() {
-    setModal(false)
+    setModal(false);
   }
 
   return (
@@ -104,7 +103,10 @@ function Layout() {
             </option>
           </select>
           <div className="for_btn_login">
-            <button className="p-[5px_40px] bg-[green] shadow-2xl text-[white] rounded-[20px] outline-none" onClick={()=>openModal()}>
+            <button
+              className="p-[5px_40px] bg-[green] shadow-2xl text-[white] rounded-[20px] outline-none"
+              onClick={() => openModal()}
+            >
               Login
             </button>
           </div>
@@ -117,8 +119,37 @@ function Layout() {
           aria-describedby="modal-modal-description"
           className="flex justify-center items-center"
         >
-          <Box className = "bg-[#fff] w-[280px] h-[200px] rounded-[20px]">
-
+          <Box className="bg-[#fff]  rounded-[20px] flex justify-center items-center p-[20px_30px] outline-none">
+            <form action="" className="flex flex-col items-center gap-[20px]">
+              <h2 className="text-[25px] text-[red]">Login</h2>
+              <div className="for_inputs flex flex-col gap-5 mt-3">
+                <div className="email_input flex flex-col gap-2">
+                  <label htmlFor="email" className="text-[18px]">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    name=""
+                    id="email"
+                    className="outline-none border-[1px] border-[solid] border-[#000] p-[5px_20px] rounded-[20px] placeholder:text-[#000] shadow-2xl"
+                    placeholder="Enter your email"
+                  />
+                </div>
+                <div className="password_input flex flex-col gap-2">
+                  <label htmlFor="password">Password</label>
+                  <input
+                    type="password"
+                    name=""
+                    id="password"
+                    className="outline-none border-[1px] border-[solid] border-[#000] p-[5px_20px] rounded-[20px] placeholder:text-[#000]"
+                    placeholder="Enter your password"
+                  />
+                </div>
+              </div>
+              <button className="p-[5px_40px] bg-[blue] text-[#fff] rounded-[50px]">
+                Submit
+              </button>
+            </form>
           </Box>
         </Modal>
       </header>
