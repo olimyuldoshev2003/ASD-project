@@ -14,3 +14,4 @@ export default function useDarkSide() {
 
   return [colorTheme, setTheme] as const;
 }
+
