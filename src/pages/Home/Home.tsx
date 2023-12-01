@@ -6,7 +6,7 @@ import "./Home.css";
 
 function Home() {
   return (
-    <div className="mt-[300px]">
+    <div>
       Home
     </div>
   );
